@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.css';
 import Navbar from './components/Navbar';
-
+import Hero from './components/Herosection';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
+import CardSection from './components/Card';
 import Carte from './components/pages/Carte';
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<div><Hero /><CardSection /></div>} />
           <Route path="/carte" element={<Carte />} />
         </Routes>
       </Router>

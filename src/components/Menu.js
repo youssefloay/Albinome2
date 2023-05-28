@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MenuCard from './MenuCard';
 
 
+
 const Pizzas = () => {
   const [pizzaType, setPizzaType] = useState('red');
 
@@ -112,7 +113,8 @@ const Pizzas = () => {
   function pizzacard(pizza){
     return <MenuCard id={pizza.id} name={pizza.name} ingredients={pizza.ingredients} price={pizza.price}/>
   }
-  
+  const filteredPizzas = pizzaType === 'red' ? redPizzas : pizzaType === 'white' ? whitePizzas : rosePizzas;
+
     return (
 
     
@@ -121,8 +123,11 @@ const Pizzas = () => {
           <h1 className="text-center text-3xl font-bold mb-8">Carte</h1>
           <h2 className="text-center italic text-xl mb-4">
             Pour les services quotidiens du midi, repartez avec une pizza, un plat différent chaque jour ainsi que nos desserts maison.
-            <div className="mt-8">Le soir est uniquement consacré aux pizzas !</div>
+            <div className="mt-8">Le soir est uniquement consacré aux pizzas ! 
+             </div>
           </h2>
+          
+          
     
           <div className="flex justify-center space-x-6">
             <button
@@ -153,9 +158,7 @@ const Pizzas = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
-          {redPizzas.map(pizzacard)}
-   
-         
+          {filteredPizzas.map(pizzacard)}
           </div>
         </div>
       </div>

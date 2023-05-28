@@ -1,18 +1,18 @@
 function MenuCard(props) {
-    return ( 
-        <div className="flex w-3/6 rounded-md	 px-4 py-4 justify-between gap-3 border-2 border-zinc-400 my-2 mx-2	">
-            <div className="bg-red-500 w-12 h-12 flex align-center justify-center items-center rounded-full"> 
-                <p>{props.id}</p>
-            </div>
-            <div className="flex flex-col">
-                <h3>{props.name}</h3>
-                <p>{props.ingredients}</p>
-            </div>
-            <div className="flex align-center justify-center	items-center"> 
-                <p>{props.price} $</p>
-             </div>      
+    return (
+      <div className="flex flex-col md:flex-row w-full rounded-md px-4 py-4 justify-between gap-3 border-2 border-gray-300 my-2 mx-2">
+        <div className="flex flex-col flex-grow">
+          <h3 className="font-bold text-lg text-red-500">{props.name}</h3>
+          <p className="text-sm font-serif" style={{ wordWrap: 'break-word', wordBreak: 'break-all', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+  {props.ingredients.toString().split(' ').join(' ')}
+</p>
         </div>
-     );
-}
-
-export default MenuCard;
+        <div className="flex items-center justify-end mt-4 md:mt-0">
+          <p className="font-bold text-lg">{props.price} €</p>
+        </div>
+      </div>
+    );
+  }
+  
+  export default MenuCard;
+  
