@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/charlie-kingdom');
+body{
+    background-color: rgb(234, 226, 226);
+    font-family: 'Charlie Kingdom', sans-serif;;
+}
