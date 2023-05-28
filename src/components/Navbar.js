@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-
+import App from '../App';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 

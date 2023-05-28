@@ -89,76 +89,92 @@ const Pizzas = () => {
     {
       name: 'FROMAGERE',
       price: 9.50,
-      ingredients: ['Crème fraîche', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
+      ingredients: [' Rose', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
     },
   ]
   const pizzas = redPizzas.concat(whitePizzas);
-  return (
-   <div className="px-4">
-    <div>
-      <h1 className="text-center text-3xl font-bold mb-8">Carte</h1>
-      <h2 className="text-center italic text-lg mb-4">
-  Pour les services quotidiens du midi, repartez avec une pizza, un plat différent chaque jour ainsi que nos desserts maison.
-  <div className="mt-8">Le soir est uniquement consacré aux pizzas !</div>
-</h2>
-
-
-
-
-      <div className="flex justify-center space-x-6">
-        <button
-          className={`text-lg font-semibold px-4 py-2 rounded ${
-            pizzaType === 'red' ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
-          }`}
-          onClick={() => setPizzaType('red')}
-        >
-          Base Tomate
-        </button>
-        <button
-          className={`text-lg font-semibold px-4 py-2 rounded ${
-            pizzaType === 'white' ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
-          }`}
-          onClick={() => setPizzaType('white')}
-        >
-          
-          Base Crème
-        </button>
-      </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
-        {pizzaType === 'red'
-          ? redPizzas.map((pizza) => (
-              <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
-                <ul className="mt-4 space-y-2">
-                  {pizza.ingredients.map((ingredient) => (
-                    <li key={ingredient} className="text-gray-600">{ingredient}</li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          : whitePizzas.map((pizza) => (
-              <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
-                <ul className="mt-4 space-y-2">
-                  {pizza.ingredients.map((ingredient) => (
-                    <li key={ingredient} className="text-gray-600">{ingredient}</li>
-                  ))}
-                </ul>
-              </div>
-            ))
-            
-            }
-            
-      </div>
-
-      
-      
-    </div>
-    </div>
+  
+    return (
+      <div className="px-4">
+        <div>
+          <h1 className="text-center text-3xl font-bold mb-8">Carte</h1>
+          <h2 className="text-center italic text-xl mb-4">
+            Pour les services quotidiens du midi, repartez avec une pizza, un plat différent chaque jour ainsi que nos desserts maison.
+            <div className="mt-8">Le soir est uniquement consacré aux pizzas !</div>
+          </h2>
     
-  );
-};
+          <div className="flex justify-center space-x-6">
+            <button
+              className={`text-lg font-semibold px-4 py-2 rounded ${
+                pizzaType === 'red' ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
+              }`}
+              onClick={() => setPizzaType('red')}
+            >
+              Base Tomate
+            </button>
+            <button
+              className={`text-lg font-semibold px-4 py-2 rounded ${
+                pizzaType === 'white' ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
+              }`}
+              onClick={() => setPizzaType('white')}
+            >
+              Base Crème
+            </button>
 
-export default Pizzas;
+            <button
+              className={`text-lg font-semibold px-4 py-2 rounded ${
+                pizzaType === 'rose' ? 'bg-red-500 text-white' : 'bg-gray-300 text-gray-700'
+              }`}
+              onClick={() => setPizzaType('rose')}
+            >
+              Base Rose
+            </button>
+          </div>
+    
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
+            {pizzaType === 'red'
+              ? redPizzas.map((pizza) => (
+                  <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
+                    <h3 className="text-xl font-semibold">{pizza.name}</h3>
+                    <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
+                    <ul className="mt-4 space-y-2">
+                      {pizza.ingredients.map((ingredient) => (
+                        <li key={ingredient} className="text-gray-600">{ingredient}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))
+              : pizzaType === 'rose'
+                ? rosePizzas.map((pizza) => (
+                    <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
+                      <h3 className="text-xl font-semibold">{pizza.name}</h3>
+                      <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
+                      <ul className="mt-4 space-y-2">
+                        {pizza.ingredients.map((ingredient) => (
+                          <li key={ingredient} className="text-gray-600">{ingredient}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+                : whitePizzas.map((pizza) => (
+                    <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
+                      <h3 className="text-xl font-semibold">{pizza.name}</h3>
+                      <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
+                      <ul className="mt-4 space-y-2">
+                        {pizza.ingredients.map((ingredient) => (
+                          <li key={ingredient} className="text-gray-600">{ingredient}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+            }
+          </div>
+        </div>
+      </div>
+    );
+  };
+    
+    export default Pizzas;
+    
+ 
+  

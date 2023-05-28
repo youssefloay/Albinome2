@@ -4,31 +4,18 @@ import Navbar from './components/Navbar';
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Hero from './components/Herosection';
-import CardSection from './components/Card';
-import ContactInfo from './components/Contactinfo';
-import Pizzas from './components/pages/Carte';
-
+import Home from './components/pages/Home';
+import Carte from './components/pages/Carte';
 function App() {
   return (
     <>
-      
       <Router>
-      <Navbar />
-      <Routes>
-        
-        <Route path="/Carte" element={<Pizzas/>} />
-        
-      </Routes>
-    </Router>
-
-         
-      
-       <Hero/>
-       <CardSection/>
-       <ContactInfo/>
-    
-  
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/carte" element={<Carte />} />
+        </Routes>
+      </Router>
     </>
   );
 }
