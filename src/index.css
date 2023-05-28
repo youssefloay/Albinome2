@@ -6,3 +6,11 @@ body{
     background-color: rgb(234, 226, 226);
     font-family: 'Charlie Kingdom', sans-serif;;
 }
+.regular-bg{
+    background-color: #DDC69F;
+}
+
+
+.svghover svg:hover {
+    fill: #fce57e;
+}

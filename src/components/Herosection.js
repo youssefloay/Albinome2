@@ -22,8 +22,8 @@ const Hero = () => {
           />
         </div>
         {/*<p className='md:text-2xl text-xl font-bold text-gray-500'>Monitor your data analytics to increase revenue for BTB, BTC, & SASS platforms.</p>*/}
-        <button className='bg-[#DDC69F] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black inline-block'> La Carte</button>
-        <button className='bg-[#3FC060] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-blackinline-block'>UberEats</button>
+        <button className='regular-bg w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black inline-block'> La Carte</button>
+        <button className='regular-bg w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-blackinline-block'>UberEats</button>
       
       </div>
      

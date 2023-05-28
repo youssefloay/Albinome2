@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuCard from './MenuCard';
 
 
 const Pizzas = () => {
@@ -11,46 +12,55 @@ const Pizzas = () => {
       ingredients: ['Sauce tomate', 'Emmental', 'Olives'],
     },
     {
+      id:4,
       name: 'CHORIZO',
       price: 8.00,
       ingredients: ['Sauce tomate', 'Emmental', 'Chorizo'],
     },
     {
+      id:4,
       name: 'JAMBON',
       price: 8.00,
       ingredients: ['Sauce tomate', 'Emmental', 'Jambon', 'Olives'],
     },
     {
+      id:4,
       name: 'ANCHOIS',
       price: 8.00,
       ingredients: ['Sauce tomate', 'Emmental', 'Anchois', 'Olives'],
     },
     {
+      id:4,
       name: 'REINE',
       price: 9.00,
       ingredients: ['Sauce tomate', 'Emmental', 'Jambon', 'Champignons'],
     },
     {
+      id:4,
       name: '4 FROMAGES',
       price: 9.50,
       ingredients: ['Sauce tomate', 'Emmental', 'Chevre', 'Roguefort', 'Mozzarella'],
     },
     {
+      id:4,
       name: 'VESUVIO',
       price: 9.50,
       ingredients: ['Sauce tomate', 'Emmental', 'Chorizo', 'Poivrons frais'],
     },
     {
+      id:4,
       name: 'CAPRI',
       price: 9.50,
       ingredients: ['Sauce tomate', 'Emmental', 'Champignons', 'Jambon', 'Lardons', 'Oignons confits'],
     },
     {
+      id:4,
       name: 'BOLO',
       price: 9.50,
       ingredients: ['Sauce tomate', 'Emmental', 'Viande facon bolognaise'],
     },
     {
+      id:4,
       name: 'BASQUAISE',
       price: 9.50,
       ingredients: ['Sauce tomate', 'Emmental', 'Poulet', 'Oignons confits', 'Poivrons frais'],
@@ -58,27 +68,31 @@ const Pizzas = () => {
   ];
 
   const whitePizzas = [
-    {
+    { id:0,
       name: 'FROMAGERE',
       price: 9.50,
       ingredients: ['Crème fraîche', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
     },
     {
+      id:1,
       name: 'TARTIFLETTE',
       price: 9.50,
       ingredients: ['Crème fraîche', 'Emmental', 'Oignons confits', 'Reblochon', 'Pomme de terre', 'Lardons'],
     },
     {
+      id:2,
       name: 'ABEILLE',
       price: 9.50,
       ingredients: ['Crème fraîche', 'Emmental', 'Chèvre', 'Amandes', 'Miel'],
     },
     {
+      id:3,
       name: 'POULETTE',
       price: 9.50,
       ingredients: ['Crème fraîche', 'Emmental', 'Jambon', '2 oeufs'],
     },
     {
+      id:4,
       name: 'REINE BLANCHE',
       price: 9.50,
       ingredients: ['Crème fraîche'],
@@ -87,14 +101,21 @@ const Pizzas = () => {
   ];
   const rosePizzas = [
     {
+      id:1,
       name: 'FROMAGERE',
       price: 9.50,
       ingredients: [' Rose', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
     },
   ]
   const pizzas = redPizzas.concat(whitePizzas);
+
+  function pizzacard(pizza){
+    return <MenuCard id={pizza.id} name={pizza.name} ingredients={pizza.ingredients} price={pizza.price}/>
+  }
   
     return (
+
+    
       <div className="px-4">
         <div>
           <h1 className="text-center text-3xl font-bold mb-8">Carte</h1>
@@ -130,44 +151,11 @@ const Pizzas = () => {
               Base Rose
             </button>
           </div>
-    
+
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
-            {pizzaType === 'red'
-              ? redPizzas.map((pizza) => (
-                  <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
-                    <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                    <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
-                    <ul className="mt-4 space-y-2">
-                      {pizza.ingredients.map((ingredient) => (
-                        <li key={ingredient} className="text-gray-600">{ingredient}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))
-              : pizzaType === 'rose'
-                ? rosePizzas.map((pizza) => (
-                    <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                      <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
-                      <ul className="mt-4 space-y-2">
-                        {pizza.ingredients.map((ingredient) => (
-                          <li key={ingredient} className="text-gray-600">{ingredient}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))
-                : whitePizzas.map((pizza) => (
-                    <div key={pizza.name} className="bg-white rounded-lg shadow-md p-6">
-                      <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                      <p className="text-gray-600 mt-2">Price: {pizza.price} €</p>
-                      <ul className="mt-4 space-y-2">
-                        {pizza.ingredients.map((ingredient) => (
-                          <li key={ingredient} className="text-gray-600">{ingredient}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))
-            }
+          {redPizzas.map(pizzacard)}
+   
+         
           </div>
         </div>
       </div>

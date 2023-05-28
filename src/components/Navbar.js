@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
       <h1 className='w-full text-3xl font-bold text-[#DDC69F]'>
-      <Link to='/Home'>Albinome</Link></h1>
+      <Link to='/'>Albinome</Link></h1>
       
       <ul className='hidden md:flex '>
         <li className='p-8 hover:text-[#DDC69F]'>
