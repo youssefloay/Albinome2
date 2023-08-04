@@ -3,9 +3,10 @@ import UberEats from './ubereats.svg';
 
 const UberEatsButton = () => {
   return (
-    <button className="flex flex-col items-center my-4 px-4 py-4 space-x-2 bg-white text-black rounded-lg shadow">
-      <img src={UberEats} alt="Uber Eats" className="h-12 w-18 text-red-500" />
-     
+    <button className="">
+      <img src="https://cdn.worldvectorlogo.com/logos/uber-eats-1.svg" alt="Uber Eats" className="w-52 h-20" />
+      <a href="https://www.ubereats.com/" target="_blank"/>
+
     </button>
   );
 };
