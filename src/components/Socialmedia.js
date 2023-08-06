@@ -1,17 +1,17 @@
-import FacebookIcon from './facebook.svg';
-import InstagramIcon from './instagram.svg';
+import React from 'react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
 
-const SocialButtons = () => {
+function SocialButtons() {
   return (
     <div className="flex space-x-4">
-      <button className=" hover:bg-blue-600 text-white rounded-full p-2">
-        <img src={FacebookIcon} alt="Facebook" className="w-12 h-12" />
-      </button>
-      <button className=" hover:bg-purple-600 text-white rounded-full p-2">
-        <img src={InstagramIcon} alt="Instagram" className="w-12 h-12" />
-      </button>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white rounded-full p-2">
+        <FaFacebook className="w-12 h-12" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white rounded-full p-2">
+        <FaInstagram className="w-12 h-12" />
+      </a>
     </div>
   );
-};
+}
 
 export default SocialButtons;

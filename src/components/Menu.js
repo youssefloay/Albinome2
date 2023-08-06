@@ -9,108 +9,135 @@ const Pizzas = () => {
 
   const redPizzas = [
     {
-      name: 'MARGHERITA',
-      price: 6.00,
-      ingredients: ['Sauce tomate', 'Emmental', 'Olives'],
-      
+      name: 'FROMAGE',
+      price: 6.50,
+      ingredients: ["Sauce tomate, Emmental, Olives"]
     },
     {
-      
       name: 'CHORIZO',
-      price: 8.00,
-      ingredients: ['Sauce tomate', 'Emmental', 'Chorizo'],
+      price: 8.50,
+      ingredients: ["Sauce tomate, Chorizo, Emmental"]
     },
     {
-      
-      name: 'JAMBON',
-      price: 8.00,
-      ingredients: ['Sauce tomate', 'Emmental', 'Jambon', 'Olives'],
-    },
-    {
-      
       name: 'ANCHOIS',
-      price: 8.00,
-      ingredients: ['Sauce tomate', 'Emmental', 'Anchois', 'Olives'],
+      price: 8.50,
+      ingredients: ["Sauce tomate, Anchois, Olives, Emmental"]
     },
     {
- 
+      name: 'JAMBON',
+      price: 8.50,
+      ingredients: ["Sauce tomate, Jambon, Olives, Emmental"]
+    },
+    {
       name: 'REINE',
       price: 9.00,
-      ingredients: ['Sauce tomate', 'Emmental', 'Jambon', 'Champignons'],
+      ingredients: ["Sauce tomate, Jambon, Champignons, Emmental"]
     },
     {
-    
       name: '4 FROMAGES',
-      price: 9.50,
-      ingredients: ['Sauce tomate', 'Emmental', 'Chevre', 'Roguefort', 'Mozzarella'],
+      price: 10.00,
+      ingredients: ["Sauce tomate, Chèvre, Roquefort, Mozzarella, Emmental"]
     },
     {
-      
       name: 'VESUVIO',
-      price: 9.50,
-      ingredients: ['Sauce tomate', 'Emmental', 'Chorizo', 'Poivrons frais'],
+      price: 10.00,
+      ingredients: ["Sauce tomate, Chorizo, Poivrons frais, Emmental"]
     },
     {
-      
-      name: 'CAPRI',
-      price: 9.50,
-      ingredients: ['Sauce tomate', 'Emmental', 'Champignons', 'Jambon', 'Lardons', 'Oignons confits'],
+      name: 'CAPRICCIOSA',
+      price: 10.00,
+      ingredients: ["Sauce tomate, Champignons, Jambon, Lardons, Oignons confits, Emmental"]
     },
     {
-     
       name: 'BOLO',
-      price: 9.50,
-      ingredients: ['Sauce tomate', 'Emmental', 'Viande facon bolognaise'],
+      price: 10.00,
+      ingredients: ["Sauce tomate, Viande façon bolognaise, Emmental"]
     },
     {
-      
       name: 'BASQUAISE',
-      price: 9.50,
-      ingredients: ['Sauce tomate', 'Emmental', 'Poulet', 'Oignons confits', 'Poivrons frais'],
+      price: 10.00,
+      ingredients: ["Sauce tomate, Oignons confits, Poulet, Poivrons frais, Emmental"]
+    },
+    {
+      name: 'ORIENTALE',
+      price: 10.00,
+      ingredients: ["Sauce tomate, Merguez, Poivrons frais, Emmental"]
+    },
+    {
+      name: 'VÉGÉTARIENNE',
+      price: 10.00,
+      ingredients: ["Sauce tomate, Champignons, Oignons confits, Poivrons frais, Emmental"]
+    },
+    {
+      name: 'LARDONS CHÈVRE',
+      price: 10.00,
+      ingredients: ["Sauce tomate, Lardons, Chèvre, Emmental"]
     },
   ];
 
   const whitePizzas = [
-    { id:0,
-      name: 'FROMAGERE',
-      price: 9.50,
-      ingredients: ['Crème fraîche', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
+    {
+      name: 'FROMAGÈRE',
+      price: 10.00,
+      ingredients: ["Crème fraiche, Chèvre, Roquefort, Mozzarella, Emmental"]
     },
     {
-      id:1,
       name: 'TARTIFLETTE',
-      price: 9.50,
-      ingredients: ['Crème fraîche', 'Emmental', 'Oignons confits', 'Reblochon', 'Pomme de terre', 'Lardons'],
+      price: 10.00,
+      ingredients: ["Crème fraiche, Oignons confits, Lardons, Fromage à Tartiflette, Pomme de terre, Emmental"]
     },
     {
-      id:2,
-      name: 'ABEILLE',
-      price: 9.50,
-      ingredients: ['Crème fraîche', 'Emmental', 'Chèvre', 'Amandes', 'Miel'],
-      isVegetarian: true
+      name: "L'ALBIQUETTE",
+      price: 10.00,
+      ingredients: ["Crème fraiche, Chèvre, Amandes, Miel, Emmental"]
     },
     {
-      id:3,
-      name: 'POULETTE',
-      price: 9.50,
-      ingredients: ["Crème fraîche, Emmental, Jambon, 2 oeufs"],
+      name: 'LA COQUETTE',
+      price: 10.00,
+      ingredients: ["Crème fraiche, Jambon, 2 oeufs, Emmental"]
     },
     {
-      id:4,
       name: 'REINE BLANCHE',
-      price: 9.50,
-      ingredients: ["Crème fraîche, Emmental "],
+      price: 10.00,
+      ingredients: ["Crème fraiche, Champignons, Jambon, Mozzarella, Emmental"]
     },
+    {
+      name: 'ALSACIENNE',
+      price: 10.00,
+      ingredients: ["Crème fraiche, Lardons, Oignons confits, Emmental"]
+    },
+    {
+      name: 'HAWAIENNE',
+      price: 10.50,
+      ingredients: ["Crème fraiche, Poulet, Ananas, Emmental"]
+    },
+    {
+      name: 'NORVÉGIENNE',
+      price: 10.00,
+      ingredients: ["Crème fraiche, Saumon frais, Emmental"]
+    },
+    
+    
     
   ];
   const rosePizzas = [
     {
-      id:1,
-      name: 'FROMAGERE',
-      price: 9.50,
-      ingredients: [' Rose', 'Emmental', 'Chèvre', 'Roquefort', 'Mozzarella'],
+      name: '81',
+      price: 10.00,
+      ingredients: ["Sauce tomate, Crème fraiche, Chorizo, Roquefort, Mozzarella, Emmental"]
     },
-  ]
+    {
+      name: 'PIC DE NORE',
+      price: 12.00,
+      ingredients: ["Sauce tomate, Crème fraiche, Bolognaise, Oignons confits, Poivrons frais, Piment, Emmental"]
+    },
+    {
+      name: 'LA TARNAISE',
+      price:12.00,
+       ingredients:["Sauce tomate, Crème fraiche, Champignons, Poitrine fumée, Fourme d'ambert, Mozzarella, Olives, Oignons frits, Emmental"]
+    },
+    
+  ];
   const pizzas = redPizzas.concat(whitePizzas);
 
   function pizzacard(pizza){

@@ -1,6 +1,7 @@
 import React from "react";
 import Typed from "react-typed";
 import UberEatsButton from "./UberEats";
+import { Link } from 'react-router-dom';
 
 import MenuIcon from "./MenuIcon.svg";
 import NousContacter from "./nousContacter.svg";
@@ -12,7 +13,7 @@ const Hero = () => {
         {/* Hero section content */}
         <div className="max-w-[700px] mt-7 w-full h-fit mx-auto text-center flex flex-col justify-center">
           <img
-            src="/img/lgnoir.png"
+            src="/img/lgblanc.png"
             alt="lgnoir"
             className="mx-auto md:w-2/5 sm:w-3/5 w-3/5 hover:animate-pulse"
           />
@@ -34,7 +35,7 @@ const Hero = () => {
             {" "}
             {/* Add margin-bottom */}
             Réservez au&nbsp;
-            <a href="tel:07-83-81-43-74" className="text-[#DDC69F]">
+            <a href="tel:07-83-81-43-74" className="text-[#DDC69F] hover:text-white">
               07 83 81 43 74
             </a>
           </p>
@@ -57,7 +58,7 @@ const Hero = () => {
               href="https://www.google.com/maps/search/?api=1&query=11%20Rue%20Jean%20Rostand,%2081000%20Albi"
               target="_blank"
               rel="noopener noreferrer"
-              className="address-link text-lg"
+              className="address-link text-lg hover:text-Albi"
             >
               11 Rue Jean Rostand, 81000 Albi
             </a>
@@ -72,26 +73,30 @@ const Hero = () => {
         
  
   
-      <div className=" rounded-lg	mx-4 bg-white flex justify-center  sm:w-screen lg:w-1/5   ">
+      <div className=" rounded-lg	mx-4 bg-white flex justify-center  hover:bg-Albi sm:w-screen lg:w-1/5   ">
         <UberEatsButton/>
     </div>
       
     
 
-         <div className="sm:w-screen lg:w-1/5 "><a href="https://deliveroo.fr/" target="_blank"><DeliverooButton/></a></div>
+    <div className=" rounded-lg	mx-4 bg-white flex justify-center  hover:bg-Albi sm:w-screen lg:w-1/5   "><DeliverooButton/></div>
 
         <div class=" sm:w-screen   lg:w-1/5 bg-white hover:bg-Albi h-20    text-black font-bold rounded items-center flex justify-center	 space-x-5 ">
-          {" "}
-          <img src={MenuIcon} alt="La carte"  />
-          <span>La carte</span>
-        </div>
+          
+      <Link to='/Carte' className="flex items-center space-x-2">
+        <img src={MenuIcon} alt="La carte" />
+        <span>La carte</span>
+      </Link>
+    </div>
 
      
   
   <div class="sm:w-screen   lg:w-1/5 bg-white hover:bg-Albi h-20 text-black font-bold rounded  items-center flex justify-center space-x-5	">
-          {" "}
+          
+          <Link to='/Nouscontacter' className="flex items-center space-x-2">
           <img src={NousContacter} alt="nous contacter"  />
           <span>Nous contacter</span>
+          </Link>
   </div>
         
 
