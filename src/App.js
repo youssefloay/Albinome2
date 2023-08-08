@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Herosection';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import Footer from './components/footer';
 import Carte from './components/pages/Carte';
 
 import Contact from './components/pages/Nouscontacter';
@@ -19,6 +19,7 @@ function App() {
           <Route path="/carte" element={<Carte />} />
           <Route path='/Nouscontacter' element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

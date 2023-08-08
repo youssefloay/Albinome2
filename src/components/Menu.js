@@ -108,12 +108,12 @@ const Pizzas = () => {
     },
     {
       name: 'HAWAIENNE',
-      price: 10.50,
+      price: 10.00,
       ingredients: ["Crème fraiche, Poulet, Ananas, Emmental"]
     },
     {
       name: 'NORVÉGIENNE',
-      price: 10.00,
+      price: 10.50,
       ingredients: ["Crème fraiche, Saumon frais, Emmental"]
     },
     
@@ -128,7 +128,7 @@ const Pizzas = () => {
     },
     {
       name: 'PIC DE NORE',
-      price: 12.00,
+      price: 10.00,
       ingredients: ["Sauce tomate, Crème fraiche, Bolognaise, Oignons confits, Poivrons frais, Piment, Emmental"]
     },
     {
@@ -153,10 +153,11 @@ const Pizzas = () => {
         
         <div>
           <h1 className="text-center text-3xl font-bold mb-8 text-white">Carte</h1>
-          <h2 className="text-center italic text-xl mb-4  text-Albi">
-            Pour les services quotidiens du midi, repartez avec une pizza, un plat différent chaque jour ainsi que nos desserts maison.
-            <div className="mt-8">Le soir est uniquement consacré aux pizzas ! 
-            <div className='mt-8'>Pour connaitre le menu de semaine, suivez-nous sur nos réseaux sociaux.</div>
+          <h2 className="text-center italic text-xl mb-4 p-3  text-Albi">
+          Découvrez nos services quotidiens du midi, comprenant une délicieuse variété de plats : des pizzas savoureuses et un plat différent chaque jour, accompagnés de nos délicieux desserts faits maison.
+             Ne manquez pas l'occasion de déguster nos délicieux mets préparés avec passion et créativité !           
+            <div className="mt-8">Le soir, cédez-vous entièrement à notre sélection exclusive de pizzas !
+            <div className='mt-8'>Pour être informé du menu de la semaine, suivez-nous sur nos réseaux sociaux.</div>
             <span className="flex items-center justify-center mt-4 "> <SocialButtons/> </span>
             <img src='/img/lgnoir.png' alt='lgnoir' className=' mx-auto md:w-2/5 sm:w-3/5 w-3/5 hover:animate-pulse'/>
              </div>

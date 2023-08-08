@@ -34,7 +34,7 @@ const Hero = () => {
           <p className="md:text-5xl text-xl font-bold text-[#DDC69F]">
             {" "}
             {/* Add margin-bottom */}
-            Réservez au&nbsp;
+            Commandez au&nbsp;
             <a href="tel:07-83-81-43-74" className="text-[#DDC69F] hover:text-white">
               07 83 81 43 74
             </a>
@@ -68,7 +68,7 @@ const Hero = () => {
  
       {/* lg:w-4/6 lg:m-auto lg:flex lg:justify-around lg:items-center */}
 
-      <div class=" sm:flex-row mx-10 align-center space-y-2 lg:w-4/6 lg:m-auto lg:flex lg:justify-around lg:items-center lg:mt-20  space-x-5  ">
+      <div class=" sm:flex-row mx-10 align-center space-y-2 lg:w-4/6 lg:m-auto lg:flex lg:justify-around lg:items-center lg:mt-20  space-x-5 pb-5  ">
       <div></div>
         
  
