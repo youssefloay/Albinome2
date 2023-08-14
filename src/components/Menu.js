@@ -3,7 +3,7 @@ import MenuCard from './MenuCard';
 import PizzaSize from './Pizzasize.svg'
 import Plusicon from './plusicon.svg'
 import CanIcon from './canicon.svg'
-import SocialButtons from './Socialmedia';
+import SocialPopupButton from './SocialPopup';
 const Pizzas = () => {
   const [pizzaType, setPizzaType] = useState('red');
 
@@ -157,50 +157,47 @@ const Pizzas = () => {
           Découvrez nos services quotidiens du midi, comprenant une délicieuse variété de plats : des pizzas savoureuses et un plat différent chaque jour, accompagnés de nos délicieux desserts faits maison.
              Ne manquez pas l'occasion de déguster nos délicieux mets préparés avec passion et créativité !           
             <div className="mt-8">Le soir, cédez-vous entièrement à notre sélection exclusive de pizzas !
-            <div className='mt-8'>Pour être informé du menu de la semaine, suivez-nous sur nos réseaux sociaux.</div>
-            <span className="flex items-center justify-center mt-4 "> <SocialButtons/> </span>
-            <img src='/img/lgnoir.png' alt='lgnoir' className=' mx-auto md:w-2/5 sm:w-3/5 w-3/5 hover:animate-pulse'/>
+            <div className='mt-8'>Pour être informé du menu de la semaine, suivez-nous sur nos réseaux sociaux </div>
+            
+            
              </div>
              
           </h2>
           
 
-<div className='flex justify-center'>
-<div className="sm:w-full md:w-1/2 lg:w-1/4 bg-Albi rounded inline-flex shadow-md p-4 text-center my-2">
-        
-          <div className="flex items-center mb-2">
-            <div className="mr-3 text-white text-3xl">Midi</div>
-            <span>
-              <img src={PizzaSize} alt="33cm Pizza" className="w-11 h-11 ml-3 mr-3" />
-              33cm
-            </span>
-            <span className="ml-7 mr-7">ou</span>
-            <span>
-              <img src={PizzaSize} alt="28cm Pizza" className="w-11 h-11 ml-3" />
-              28cm
-            </span>
-            <span>
-              <img src={Plusicon} alt="Plus Pizza" className="w-5 h-5 ml-3 mr-3" />
-            </span>
-            <span>
-              <img src={CanIcon} alt="Can Icon" className="w-11 h-11 mb-3" />
-            </span>
-           
-      </div>
-      
-      </div>
-      </div>
-      <div className="sm:w-full md:w-1/2 lg:w-1/4 bg-Albi rounded-md inline-flex shadow-md p-4 text-center my-2 ml-4">
-        
-          <div className="flex items-center mb-2">
-            <div className="mr-3 text-white text-3xl">Soir</div>
-            <span>
-              <img src={PizzaSize} alt="33cm Pizza" className="w-11 h-11 ml-3 mr-4" />
-              33cm
-            </span>
-            <div className="ml-3 mr-3 text-black text-3xl">uniquement</div>
- </div>
- </div>
+          <div className="flex flex-col lg:flex-row justify-center lg:justify-between ">
+  <div className="w-full lg:w-1/3 bg-Albi rounded-md inline-flex shadow-md p-4 text-center my-2 lg:my-0 lg:mx-auto ">
+    <div className="flex items-center mb-2">
+      <div className="mr-3 text-white text-2xl lg:text-3xl">Midi</div>
+      <span>
+        <img src={PizzaSize} alt="33cm Pizza" className="w-10 h-10 lg:w-11 lg:h-11 ml-3 mr-3" />
+        33cm
+      </span>
+      <span className="ml-4 mr-4">ou</span>
+      <span>
+        <img src={PizzaSize} alt="28cm Pizza" className="w-10 h-10 lg:w-11 lg:h-11 ml-3" />
+        28cm
+      </span>
+      <span>
+        <img src={Plusicon} alt="Plus Pizza" className="w-4 h-4 lg:w-5 lg:h-5 ml-3 mr-3" />
+      </span>
+      <span>
+        <img src={CanIcon} alt="Can Icon" className="w-10 h-10 lg:w-11 lg:h-11 mb-3" />
+      </span>
+    </div>
+  </div>
+  <div className="w-full lg:w-1/3 bg-Albi rounded-md inline-flex shadow-md p-4 text-center my-2 lg:my-0 lg:mx-auto mb-5">
+    <div className="flex items-center mb-2">
+      <div className="mr-3 text-white text-2xl lg:text-3xl">Soir</div>
+      <span>
+        <img src={PizzaSize} alt="33cm Pizza" className="w-10 h-10 lg:w-11 lg:h-11 ml-3 mr-4" />
+        33cm
+      </span>
+      <div className="ml-4 mr-4 text-black text-lg lg:text-xl">uniquement</div>
+    </div>
+  </div>
+</div>
+
          {/* Pizza type selection */}
       <div className="flex justify-center space-x-6">
         <button

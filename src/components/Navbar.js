@@ -1,9 +1,11 @@
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [transparent, setTransparent] = useState(true);
 
   const handleNav = () => {
     setNav(!nav);
@@ -13,9 +15,23 @@ const Navbar = () => {
     setNav(false);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setTransparent(false);
+    } else {
+      setTransparent(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='sticky-top flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
-      <h1 className='w-full text-4xl font-bold text-black-500 '>
+    <nav className={`sticky top-0 z-50 ${transparent ? 'bg-opacity-0' : 'bg-black'} shadow-md flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white transition-all duration-300`}>      <h1 className='w-full text-4xl font-bold text-black-500 '>
         <Link to='/' onClick={handleLinkClick}>Albinome</Link>
       </h1>
 
@@ -50,11 +66,11 @@ const Navbar = () => {
         <li className='p-8 border-b border-Albi'>
           <Link to='/Nouscontacter' onClick={handleLinkClick}>Nous Contacter</Link>
         </li>
-        <li className='p-8 border-b border-Albi'><a href="tel:07 83 81 43 74">07 83 81 43 74</a></li>
+        {/*<li className='p-8 border-b border-Albi'><a href="tel:+33 7 83 81 43 74">07 83 81 43 74</a></li>*/}
         <li className='p-8 border-b text-[#3FC060] border-Albi'><a href='https://www.ubereats.com/' target='_blank' rel='noopener noreferrer' onClick={handleLinkClick}>UberEats</a></li>
         <li className='p-8 border-b text-[#00cdbc] border-Albi'><a href='https://www.ubereats.com/' target='_blank' rel='noopener noreferrer' onClick={handleLinkClick}>Deliveroo</a></li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
